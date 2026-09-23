@@ -1,0 +1,27 @@
+{
+  "name": "magic-hour-webflow",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npx --yes @webflow/webflow-cli@2.8.0 extension serve --skip-update-check\" \"npm run watch-webpack\"",
+    "build": "npm run build-webpack && npx --yes @webflow/webflow-cli@2.8.0 extension bundle --skip-update-check",
+    "watch-webpack": "webpack --config webpack.config.mjs --mode development --watch",
+    "build-webpack": "webpack --config webpack.config.mjs --mode production",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@webflow/designer-extension-typings": "^2.0.2",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.21.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.24.0",
+    "react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
